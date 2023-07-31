@@ -45,14 +45,22 @@
              4. 자식선택자: 띄어쓰기(div a)
              5. 직계자식선택자: 오른쪽 꺽쇠(div > a)
              6. 종속선택자: 요소명#아이디명 / 요소명.클래스명(div.mymy -> div인데 클래스가 mymy)
-            
              */
+
+            /* 요소의 초기화 -기존의 기본 셋팅값 중 마진/패딩 초기화*/
+            html,body,h1,h2{
+                margin: 0;
+                padding: 0;
+            }
+
             /* 레이아웃 박스 공통 디자인 */
             .bx {
                 /* 크기: w800->가로크기 */
                 width: 800px;
                 /* 외곽선 bd -> 두께, 종류, 색상 */
-                border: 4px double darkgreen;
+                border: 3px double darkgreen;
+                /* 코너 둥글게 마감처리 */
+                border-radius: 7px;
                 /* 패딩 */
                 padding: 20px;
                 /* 마진: '마영오' 씨를 무대 중앙으로 모시겠습니다ㅋㅋ */
@@ -79,6 +87,7 @@
             }
             /* 타이틀 */
             #top h1 {
+                margin: 15px 0;
                 color: darkcyan;
                 font-size: 50px;
                 font-weight: normal;
@@ -138,6 +147,19 @@
                 font-style: normal;
                 color: darkolivegreen;
             }
+            /* 대표자 span */
+            .utxt{
+                text-decoration: none;
+                text-decoration-style:double;
+                text-decoration-color: darkcyan;
+            }
+            /* 종속선택자로 같은 이름의 클래스인데 다른 디자인으로 변경하여 셋팅하기 */
+            b.utxt{
+                text-decoration: none;
+                text-decoration-style: wavy;
+                text-decoration-color: darkcyan;
+            }
+
         </style>
     </head>
     <body>
@@ -171,8 +193,8 @@
         <footer id="info" class="bx">
             <address>
                 서울시 강남구 역삼동 119 대호B 8F <br />
-                대표: 박수민 <br />
-                전화: 010-1234-5678
+                대표: <span class="utxt">박수민</span> <br />
+                전화: <b class="utxt">010-1234-5678</b>
             </address>
         </footer>
 
