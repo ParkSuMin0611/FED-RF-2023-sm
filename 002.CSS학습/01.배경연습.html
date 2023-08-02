@@ -47,7 +47,16 @@
                 고정의 의미는 스크롤시 보이는 화면 기준으로 배경고정*/
             background-attachment: fixed;
 
-            /* 5. */
+            /* 5. 배경위치 bgp
+                값: 가로 세로
+                1. 가로방향 : left, center,right
+                2. 세로방향 : top, center, bottom
+                - 수치값 : px, %, em 등 여러단위 사용가능
+
+                -> 방향별 개별속성은?
+                background-position-x: 값;
+                background-position-y: 값;
+            */
             background-position: right bottom;
 
             /* 6. 배경이미지 크기 bgz: 가로 세로 
@@ -56,7 +65,15 @@
                 2) cover: 이미지를 박스에 모두 채움(잘리는 부분 있음)
                 수치값: 가로 세로 중 하나만 주면 이미지가 비율유지
             */
-            background-size: 200px;
+            /* background-size: contain; */
+            /* background-size: cover; */
+            /* background-size: 200px; 
+            가로200px 세로auto */
+            /* background-size: 200px auto;  
+            가로200px 세로auto */
+            /* background-size: auto 200px; 
+            가로auto 세로 200px*/
+            /* background-size: 400px 100px; */
             
             /* 
                 [ 배경 한꺼번에 쓰기]
@@ -66,7 +83,9 @@
                 ->주의 사항!
                 만약 배경 한 번에 셋팅을 개별셋팅 아래에 놓으면 기존에 개별셋팅한 배경설정이 모두 지워진다!
                 따라서 개별 세팅이 필요한 경우 배경 한 번에 셋팅 아래쪽에 코딩해야 한다!
+                예) background: lightblue url(./imgs/bg_mainvisual.jpg) no-repeat fixed center/cover;
             */
+            
             /* body아래 .wrap 박스 */
             .wrap{
                 height: 100%;
