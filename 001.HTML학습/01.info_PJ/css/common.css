@@ -46,7 +46,7 @@ ________________________________________________
  */
 
 /* 요소의 초기화 -기존의 기본 셋팅값 중 마진/패딩 초기화*/
-html,body,h1,h2,figure {
+html,body,h1,h2,figure, blockquote {
     margin: 0;
     padding: 0;
 }
