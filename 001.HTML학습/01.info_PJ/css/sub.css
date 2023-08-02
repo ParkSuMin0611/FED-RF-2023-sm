@@ -119,6 +119,20 @@ h2.st5{
      -> 줄간격의 응용은 버튼 등의 글자를 세로 중앙에 오게 할 때 박스 높이값만큼 준다.
     */
 }
+/* mark요소 디자인 변경하기 */
+.acont p mark {
+    display: block;
+    background-color: rgba(0, 100, 0, 0.295);
+    text-align: center;
+    margin: 15px 0;
+    padding: 20px 50px;
+    font-size: 25px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    color: green;
+    font-family: 'Bagel Fat One', cursive;
+    font-weight: lighter;
+}
 
 /* 유튜브 동영상 박스 */
 .mvbx{
