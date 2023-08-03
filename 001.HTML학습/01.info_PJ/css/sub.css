@@ -230,6 +230,23 @@ h2.st5{
     background-color: darkcyan;
 }
 
+/* 뉴스 파트 공통 class */
+.nbx{
+    border-top: 2px dashed darkcyan;
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+/* 오늘의 작품 & 느낌 */
+.work{
+    text-align: center;
+    /* 배경색 */
+    /* background-color: darkseagreen; */
+
+    /* 그라데이션 -> 이미지로! bgi */
+    background-image: linear-gradient();
+}
+
 #cont{
     background-color: white;
 }
