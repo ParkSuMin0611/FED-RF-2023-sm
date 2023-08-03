@@ -237,6 +237,62 @@ h2.st5{
     padding: 20px 0;
 }
 
+/* 뉴스 파트 공통 a요소 */
+.nbx a{
+    /* 글자크기 fz */
+    font-size: 17px;
+    /* 줄간격 lh */
+    line-height: 2.5;
+    /* 글자색 c */
+    color: #222;
+    /* 밑줄없앰 */
+    text-decoration: none;
+}
+
+/* 공통 a마우스 오버시 */
+.nbx a:hover{
+    color: lightblue;
+    text-shadow: 1px 1px 1px darkgreen;
+}
+
+/* 뉴스 타이틀 공통 */
+.nbx h3{
+    font-family: 'Black Han Sans', sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    background-image: linear-gradient(to right, lightblue, transparent);
+    padding: 7px;
+}
+
+/* 주요뉴스 ul */
+.cnews ul li::before{
+    content: '🍕';
+}
+/* 
+    [ CSS 가상요소: before, after ]
+    -모든 요소는 맨앞과 맨뒤에 가상요소를 사용할 수 있다.
+    -맨앞: before, 맨뒤: after
+    -필수속성: content
+    -이미지는 url() 사용
+*/
+
+/* 분야별 뉴스 */
+.snews dt{
+    font-family: 'Sunflower', sans-serif;
+    font-size: 20px;
+    background-color: lightcyan;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 50%;
+    border: 2px dotted darkcyan;
+    margin-top: 10px;
+}
+
+/* dd 앞에 가상요소로 블릿넣기 */
+.snews dd::before{
+    content: '🍔';
+}
+
 /* 오늘의 작품 & 느낌 */
 .work{
     text-align: center;
@@ -244,7 +300,47 @@ h2.st5{
     /* background-color: darkseagreen; */
 
     /* 그라데이션 -> 이미지로! bgi */
-    background-image: linear-gradient();
+    /* 
+        background-image:
+        linear-gradient(방향, 색1, 색2);
+        linear-gradient(방향, 색1 몇%, 색2 몇%);
+        linear-gradient(각도, 색1 몇%, 색2 몇%);
+        -옵션
+            1. 방향: to top, to bottom, to left, to right
+            2. 각도: deg
+    */ 
+    background-image: linear-gradient(45deg, seagreen, lightseagreen, lightblue);
+
+    border: 20px dashed green;
+    padding: 20px;
+    margin: 10px;
+
+    /* 
+        배경옵션 추가!
+        background-clip: 배경이 적용되는 범위 설정
+        1. border-box: 보더까지 적용(기본값)
+        2. padding-box: 패딩까지 적용
+        3. content-box: 내용영역만 적용(패
+    */
+    background-clip: content-box;
+}
+
+.work h3{
+    margin: 10px;
+    font-family: 'Dongle', sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+}
+
+.work img{
+    border: 15px ridge gold;
+    /* ridge: 액자틀 모양 */
+}
+/* 작품명 */
+.work figcaption{
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+    padding: 5px;
 }
 
 #cont{
