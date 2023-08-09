@@ -62,6 +62,23 @@ body *{
     /* 메탈배경 */
     background: 
     url(../images/metal01.jpg) no-repeat center/cover;
+    border-radius: 100px 100px 140px 140px;
+}
+
+/* 가상요소로 머리에 가발 씌우기 */
+.head::before{
+    content: '';
+    display: block;
+    /* 마치 div를 넣은 것 같다~! */
+    position: absolute;
+    /* 앱솔루트요소 */
+    top: -99px;
+    left: -92px;
+    width: 428px;
+    height: 471px;
+
+    /* 배경 */
+    background: url(../images/hair4.png) no-repeat 0/100% 100%;
 }
 
 /* 머리 하위요소 공통 */
@@ -113,16 +130,40 @@ body *{
 /* 입 */
 .mouth{
     /* 위치 */
-    left: 50px;
-    bottom: 10px;
+    left: 75px;
+    bottom: 30px;
     /* 크기 */
-    width: 120px;
-    height: 80px;
+    width: 100px;
+    height: 40px;
     /* 배경 */
     background: 
     url(../images/mouth.png) no-repeat 0/100% 100%;
 }
-
+/* 귀공통 */
+.ear{
+    /* 위치 */
+    top: 100px;
+    /* 크기 */
+    width: 20px;
+    height: 50px;
+    /* 배경 */
+    background: 
+    url(../images/metal02.jpg) no-repeat center/cover;
+}
+/* 왼귀 */
+.ear1{
+    /* 개별위치 왼쪽바깥 */
+    left:-10px;
+    /* 둥근모서리: 왼쪽위 왼쪽아래 */
+    border-radius: 20px 0 0 20px;
+}
+/* 오른귀 */
+.ear2{
+    /* 개별위치 오른쪽바깥 */
+    right:-10px;
+    /* 둥근모서리: 오른쪽위 오른쪽아래 */
+    border-radius: 0 20px 20px 0;
+}
 
 
 
