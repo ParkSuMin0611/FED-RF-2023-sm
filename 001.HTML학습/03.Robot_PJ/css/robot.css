@@ -20,8 +20,7 @@ html,body,h1,h2,h3,ul,ol{
 
 body{
     /* 전체 배경이미지 */
-    background: 
-    url(../images/bg.jpg) no-repeat fixed top/cover;
+    background: url(../images/bg.jpg) no-repeat fixed top/cover;
 }
 
 /* 공사중표시 */
@@ -29,13 +28,22 @@ body *{
     outline: 2px dashed yellow;
 }
 
+/* 공통 클래스 */
+
+/* 메탈배경 클래스 */
+.metal1{
+    background: url(../images/metal01.jpg) no-repeat center/cover;
+}
+.metal2{
+    background: url(../images/metal02.jpg) no-repeat center/cover;
+}
 /******************* 1. 상단영역 *******************/
 /* 1-1.로고 */
 /* 1-2.링크타이틀 */
 /* 1-3.탑이동버튼 */
 /******************* 2. 메인영역 *******************/
 .main-aria{
-    overflow: hidden;
+    /* overflow: hidden; */
     /* 첫번째 자식요소 블록박스에 마진탑을 준경우
     그 마진값은 부모요소 바깥쪽으로 나간다!(기본성질)
     마진탑을 포함하려면 부모요소에 overflow:hidden
@@ -47,7 +55,7 @@ body *{
     /* 패딩 : 위,양쪽, 아래 */
     padding: 200px 0 50px;
     /* 마진탑 */
-    margin-top: 30px;
+    /* margin-top: 30px; */
 
 
 }
@@ -60,13 +68,13 @@ body *{
     /* 무대중앙 마영오! */
     margin: 0 auto;
     /* 메탈배경 */
-    background: 
-    url(../images/metal01.jpg) no-repeat center/cover;
+    background: url(../images/metal01.jpg) no-repeat center/cover;
     border-radius: 100px 100px 140px 140px;
+    z-index: 1;
 }
 
 /* 가상요소로 머리에 가발 씌우기 */
-.head::before{
+.head::after{
     content: '';
     display: block;
     /* 마치 div를 넣은 것 같다~! */
@@ -80,9 +88,21 @@ body *{
     /* 배경 */
     background: url(../images/hair4.png) no-repeat 0/100% 100%;
 }
+/* 오버시 가상요소 가발 변경하기 */
+.head:hover::after{
+    /* 앱솔루트요소 */
+    top: -100px;
+    left: -85px;
+    /* 부모는? .head */
+    width: 425px;
+    height: 430px;
 
-/* 머리 하위요소 공통 */
-.head>div{
+    /* 배경 */
+    background-image: url(../images/hair2.png);
+}
+
+/* 머리/몸통 하위요소 공통 */
+.head>div,.body>div{
     position: absolute;
     /* 모든 직계하위요소는 앱솔루트! */
 }
@@ -160,14 +180,40 @@ body *{
 /* 오른귀 */
 .ear2{
     /* 개별위치 오른쪽바깥 */
-    right:-10px;
+    right:-0px;
     /* 둥근모서리: 오른쪽위 오른쪽아래 */
     border-radius: 0 20px 20px 0;
 }
 
-
-
 /* 2-1-2.몸통 */
+.body{
+    position: relative;
+    /* 부모자격 - 하위직계자식 div앱솔루트 */
+    width: 250px;
+    height: 400px;
+    /* 무대중앙 마영오! */
+    margin: 0 auto;
+    margin-top: 50px;
+}
+/* 목 */
+.neck{
+    top: -60px;
+    left: calc(50% - 50px/2);
+    /* 중앙보내기 원리
+    부모박스의 50% 보내고 자신크기의 절반 빼기 
+    자신크기는 left는 width, top은 height이다.*/
+    width: 50px;
+    height: 70px;
+    border-radius: 20px;
+}
+/* 왼팔 */
+/* 오른팔 */
+/* 왼다리 */
+/* 오른다리 */
+/* 왼어깨 */
+/* 오른어깨 */
+/* TV */
+
 /* 2-2. 로봇설명박스 */
 /******************* 3. 하단영역 *******************/
 /* 3-1. 회사정보 */
