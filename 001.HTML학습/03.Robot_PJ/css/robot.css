@@ -74,8 +74,6 @@ body *{
 
     /* 트랜스폼 크기조정 */
     transform: scale(2);
-
-
     z-index: 99;
     /* 가장위! */
 }
@@ -486,9 +484,33 @@ body *{
     width: 100%;
 }
 
-
-
-
 /* 2-2. 로봇설명박스 */
+.box-text{
+    /* 최대크기800px */
+    max-width: 800px;
+    /* 박스중앙 : 마영오 */
+    margin: 0 auto;
+    /* 하단마진 200px */
+    margin-bottom: 200px;
+    /* 반투명 검정배경 */
+    background-color: rgba(0 0 0 / 0.5);
+    /* 글자색 흰색 */
+    color: #fff;
+    /* 글자그림자 */
+    text-shadow: 1px 1px 1px #000;
+    /* 패딩 : 15px 30px */
+    padding: 15px 30px;
+    /* 경계선 : 3px solid #fff */
+    border: 3px solid #fff;
+    /* 둥근모서리 : 20px */
+    border-radius: 20px;
+    /* 박스그림자를 이용한 글로우효과 : 
+    내부만 2개줌 */
+    box-shadow: 
+    inset 0 0 20px blue,
+    inset 0 0 50px 10px cyan;
+}
+
+
 /******************* 3. 하단영역 *******************/
 /* 3-1. 회사정보 */
