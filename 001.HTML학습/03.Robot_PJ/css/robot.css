@@ -509,6 +509,86 @@ body *{
     box-shadow: 
     inset 0 0 20px blue,
     inset 0 0 50px 10px cyan;
+    /* 박스그림자: x y blur spread color */
+}
+
+/* 2-2-1.제목 */
+.box-text h2{
+    /* 스티키 포지션 */
+    position: sticky;
+    /* top값 설정시 위치고정 */
+    top: 15px;
+    /* 글자 : 35px 'Chakra Petch' */
+    font: 3.5rem 'Chakra Petch';
+    /* 글자색 lime */
+    color: lime;
+    /* 글자중앙정렬 */
+    text-align: center;
+    /* 배경색 흰색 반투명  */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* 둥근모서리 20px */
+    border-radius: 20px;
+}
+/* 2-2-2.출처 */
+.box-text small{
+    /* 글자체 : 'Chakra Petch' */
+    font-family: 'Chakra Petch';
+    /* 글자크기 12px -> rem? */
+    font-size: 1.2rem;
+    /* 줄간격 : 3배 */
+    line-height: 3;
+    /* 글자색 : 노란색 */
+    color: #ff0;
+    /* 블록변경 */
+    display: block;
+    /* 글자중앙 */
+    text-align: center;
+}
+
+/* 2-2-3.내용단락 */
+.desc{
+    /* 글자체 : 'Barlow' */
+    font-family: 'Barlow';
+    /* 글자크기 : 17px -> rem */
+    font-size: 1.7rem;
+    /* 줄간격 : 1.8배 */
+    line-height: 1.8;
+    /* 자간 : 1px */
+    letter-spacing: 1px;
+    /* 단어간격 : 2px */
+    word-spacing: 2px;
+
+    /* 
+        [ 다단설정하기] 
+        - 다중열속성
+        -> column-count : 다중열개수
+        -> column-rule : 다중열구분선
+        -> column-gap : 다중열사이간격
+    */
+    /* 다중열 개수 */
+    column-count: 3;
+    /* 다중열 구분선 : 두께 종류 색상
+    보더 셋팅과 유사 */
+    column-rule: 5px dotted lightgreen;
+    /* 다중열 사이간격 */
+    column-gap: 55px;
+
+    /* 양쪽정렬 : taj */
+    text-align: justify;
+    /* 단어 단위로 줄바꿈하므로
+    양쪽정렬시 영어는 단어깨기를 해줘야함!
+    2byte인 한글,일본어 등은 안깨도 됨! */
+    word-break: break-all;
+
+    /* 들여쓰기 : ti */
+    text-indent: 40px;
+    
+}
+/* 설명문단 첫글자 가상요소로 디자인변경 */
+.desc::first-letter{
+    font-size: 3rem;
+    font-weight: bold;
+    color: orange;
 }
 
 
