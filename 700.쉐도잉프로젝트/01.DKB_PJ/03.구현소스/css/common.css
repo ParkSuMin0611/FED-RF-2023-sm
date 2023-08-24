@@ -4,9 +4,9 @@
 /* 공유기능 요소 셋팅 */
 
 /************* 1. 상단영역 *************/
-#header {
+/* #header{ */
     /* background-color: lightblue; */
-}
+/* } */
 .header .partbox {
     height: 120px;
 }
@@ -59,7 +59,7 @@
     transform: scale(.5,.3);
     margin-left: 3px;
 }
-************ 2. 메인영역 ************
+/************* 2. 메인영역 *************/
 #main {
     /* 본문영역 최소높이 셋팅! */
     min-height: 800px;
